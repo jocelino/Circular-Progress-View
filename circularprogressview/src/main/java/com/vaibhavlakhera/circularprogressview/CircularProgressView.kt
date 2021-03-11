@@ -195,7 +195,7 @@ class CircularProgressView : View {
         // Current progress is calculated in degrees from total and progress values
         if (totalValue != 0 && progressValue != 0 && progressValue <= totalValue) {
             val progressSweepAngle = if (totalValue == progressValue) 360f else ((360f / totalValue) * progressValue)
-            canvas.drawArc(circleBounds, startAngle, progressSweepAngle, false, paintProgress)
+            canvas.drawArc(circleBounds, startAngle, progressSweepAngle+"%", false, paintProgress)
         }
     }
 
